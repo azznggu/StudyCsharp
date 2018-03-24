@@ -1,0 +1,10 @@
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\bin\Debug\EventTest.exe.config
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\bin\Debug\EventTest.exe
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\bin\Debug\EventTest.pdb
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.csprojResolveAssemblyReference.cache
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.Form1.resources
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.Properties.Resources.resources
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.csproj.GenerateResource.Cache
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.csproj.CoreCompileInputs.cache
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.exe
+C:\Users\JONGPARK\Desktop\reposit\csharp\EventTest\EventTest\obj\Debug\EventTest.pdb
