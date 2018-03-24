@@ -39,6 +39,7 @@
             this.textBox_write.Location = new System.Drawing.Point(12, 45);
             this.textBox_write.Multiline = true;
             this.textBox_write.Name = "textBox_write";
+            this.textBox_write.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_write.Size = new System.Drawing.Size(317, 159);
             this.textBox_write.TabIndex = 0;
             // 

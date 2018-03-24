@@ -10,22 +10,39 @@ namespace EventTest.TestAction
     public class TestWriteAction
     {
         private Action<string> writeText;
-
+        public Thread testThread;
         public TestWriteAction(Action<string> action)
         {
             this.writeText = action;
 
-            Thread testThread = new Thread(Run);
+            testThread = new Thread(Run);
             testThread.Start();
         }
 
         public void Run()
         {
-            while (true)
+            bool continueFlag = true;
+            Random random = new Random();
+            string[] arr = { "first", "second", "third", "fourth", "fifth" };
+            using (System.Timers.Timer timer = new System.Timers.Timer(3000))
             {
-                writeText("write!!!!!");
-                Thread.Sleep(100);
+                timer.Elapsed += (sender, e) =>
+                {
+                    timer.Stop();
+                    continueFlag = false;
+                };
+                timer.Start();
+                while (continueFlag)
+                {
+                    writeText("it's " + arr[random.Next(0, arr.Length)]);
+                    Thread.Sleep(100);
+                }
             }
+        }
+
+        public void Stop()
+        {
+            testThread.Abort();
         }
     }
 }

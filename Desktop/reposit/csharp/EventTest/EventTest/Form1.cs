@@ -16,8 +16,11 @@ namespace EventTest
 
         #region member
         private bool start_flag = true;
+
         #endregion
+        delegate void deleAction(TextBox tb, string msg);
         private Action<string> action;
+        private TestWriteAction testWriteAction;
         public Form1()
         {
             InitializeComponent();
@@ -30,12 +33,13 @@ namespace EventTest
                 //
                 //
                 action = DelegText;
-                new TestWriteAction(action);
+                testWriteAction = new TestWriteAction(action);
                 start_flag = false;
                 btn_start.Text = "Stop";
             }
             else
             {
+                testWriteAction.Stop();
                 start_flag = true;
                 btn_start.Text = "Start";
             }
@@ -49,11 +53,19 @@ namespace EventTest
         private void DelegText(string msg)
         {
             SetText(textBox_write, msg);
-        }    
-    
+        }
+
         private void SetText(TextBox textBox, string msg)
         {
-            textBox.Text = textBox.Text + Environment.NewLine + msg;
+            if (InvokeRequired)
+            {
+                deleAction del= new deleAction(SetText);
+                Invoke(del, textBox, msg);
+            }
+            else
+            {
+                textBox.Text = textBox.Text + Environment.NewLine + msg;
+            }
         }
     }
 }
